@@ -1,18 +1,17 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable require-jsdoc */
 class AgeService {
-  constructor(day, month, year) {
-    this.day = day;
-    this.month = month;
-    this.year = year;
+  constructor(dob) {
+    this.dob = dob;
   }
 
   getAge() {
     const today = new Date();
+    const dobDate = new Date(+this.dob * 1000);
 
-    let yearDiff = today.getFullYear() - this.year;
-    const monthDiff = today.getMonth() - (this.month - 1);
-    const dayDiff = today.getDate() - this.day;
+    let yearDiff = today.getFullYear() - dobDate.getFullYear();
+    const monthDiff = today.getMonth() - (dobDate.getMonth() + 1);
+    const dayDiff = today.getDate() - dobDate.getDate();
 
     if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 1)) {
       yearDiff--;
