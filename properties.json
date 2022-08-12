@@ -3,6 +3,6 @@
     "track": "backend",
     "email": "ebenezerajayi@gmail.com",
     "githubUsername": "ebzeal",
-    "deployedAppURL": "",
-    "explainer": ""
+    "deployedAppURL": "https://olusola-talentql.herokuapp.com",
+    "explainer": "Deployed on Heroku. Please check Details.md for more details"
 }
